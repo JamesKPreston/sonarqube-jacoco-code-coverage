@@ -25,6 +25,6 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
     - name: Run tests with Gradle
-      run: ./gradlew test
+      run: ./gradlew test jacocoTestReport
     - name: SonarCloud
       run: ./gradlew sonarqube
