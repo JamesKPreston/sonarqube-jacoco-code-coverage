@@ -20,6 +20,10 @@ dependencies {
 
 sonarqube {
     properties {
-        property 'sonar.host.url', 'http://localhost:9000'
+        property 'sonar.host.url', 'https://sonarcloud.io'
+        property 'sonar.login', '76e19a200b71c3407a2ea4997960c5a932d2dff7'
+        property 'sonar.organization', 'spindance'
+        property 'sonar.java.binaries', "build/classes/java/main"
+        property 'sonar.java.coveragePlugin', "jacoco"
     }
 }
