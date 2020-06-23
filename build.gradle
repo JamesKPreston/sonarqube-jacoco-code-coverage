@@ -20,10 +20,17 @@ dependencies {
 
 sonarqube {
     properties {
-        property 'sonar.host.url', 'https://sonarcloud.io'
-        property 'sonar.login', '76e19a200b71c3407a2ea4997960c5a932d2dff7'
-        property 'sonar.organization', 'spindance'
-        property 'sonar.java.binaries', "build/classes/java/main"
-        property 'sonar.java.coveragePlugin', "jacoco"
+        property "sonar.projectKey", "com.tom:sonarqube-jacoco-code-coverage"
+        property "sonar.organization", "spindance"
+        property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.login", "e43314366ae65554c536c56a4a03e03220d557ff"
+        property "sonar.coverage.jacoco.xmlReportPaths", "build/reports/jacoco/codeCoverageReport/codeCoverageReport.xml"
+    }
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        xml.destination file("${buildDir}/reports/jacoco/codeCoverageReport/codeCoverageReport.xml")
     }
 }
