@@ -6,6 +6,9 @@ public class MathService {
         return firstNumber * secondNumber;
     }
 
+    public int multiple(int firstNumber, int secondNumber) {
+        return firstNumber * secondNumber;
+    }
     public int subtract(int firstNumber, int secondNumber) {
         return firstNumber - secondNumber;
     }
